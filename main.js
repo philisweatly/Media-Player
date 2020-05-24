@@ -39,13 +39,25 @@ var tracklist = [
 var trackPosition = 0;
 
 nextTrack.addEventListener("click", function () {
-  trackPosition++;
-  myAudio.src = tracklist[trackPosition];
-  myAudio.play();
+  if (trackPosition < tracklist.length - 1) {
+    trackPosition++;
+    myAudio.src = tracklist[trackPosition];
+    myAudio.play();
+  } else {
+    trackPosition = 0;
+    myAudio.src = tracklist[trackPosition];
+    myAudio.play();
+  }
 });
 
 previousTrack.addEventListener("click", function () {
-  trackPosition--;
-  myAudio.src = tracklist[trackPosition];
-  myAudio.play();
+  if (trackPosition >= 1) {
+    trackPosition--;
+    myAudio.src = tracklist[trackPosition];
+    myAudio.play();
+  } else {
+    trackPosition = tracklist.length - 1;
+    myAudio.src = tracklist[trackPosition];
+    myAudio.play();
+  }
 });
