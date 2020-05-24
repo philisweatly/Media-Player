@@ -2,7 +2,6 @@ var myAudio = document.getElementById("player");
 var isPlaying = false;
 var playPause = document.getElementById("play-pause");
 var icon = document.getElementById("icon");
-var player = document.getElementById("player");
 
 function togglePlay() {
   if (isPlaying) {
@@ -14,14 +13,14 @@ function togglePlay() {
 
 myAudio.onplaying = function () {
   isPlaying = true;
-  icon.classList.remove("fas", "fa-play");
-  icon.classList.add("fas", "fa-pause");
+  playPause.classList.remove("play");
+  playPause.classList.add("pause");
 };
 
 myAudio.onpause = function () {
   isPlaying = false;
-  icon.classList.remove("fas", "fa-pause");
-  icon.classList.add("fas", "fa-play");
+  playPause.classList.remove("pause");
+  playPause.classList.add("play");
 };
 
 var nextTrack = document.getElementById("next-track");

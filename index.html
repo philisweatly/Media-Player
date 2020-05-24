@@ -8,12 +8,37 @@
   </head>
   <body>
     <audio id="player" src="./sounds/track1.mp3"></audio>
-    <div>
-      <button id="previous-track">Previous Track</button>
-      <button id="play-pause" onclick="togglePlay()">
-        <i id="icon" class="fas fa-play"></i>
-      </button>
-      <button id="next-track">Next Track</button>
+
+    <div class="media-player">
+      <img
+        class="media-player-image"
+        src="./pics/artwork1.png"
+        alt=""
+        srcset=""
+      />
+
+      <div class="media-buttons">
+        <button id="previous-track"></button>
+        <button id="play-pause" class="play" onclick="togglePlay()">
+          <!-- <i id="icon" class="fas fa-play"></i> -->
+        </button>
+        <button id="next-track"></button>
+      </div>
+
+      <div class="track-list-box">
+        <ul class="tracks">
+          <li>i am jon saul</li>
+          <li>suicide by clown</li>
+          <li>a demon puppet walks into a bar</li>
+          <li>chasing the green dragon</li>
+        </ul>
+        <ul class="track-time">
+          <li>00:00</li>
+          <li>00:00</li>
+          <li>00:00</li>
+          <li>00:00</li>
+        </ul>
+      </div>
     </div>
 
     <script
