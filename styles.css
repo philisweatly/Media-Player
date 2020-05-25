@@ -1,8 +1,19 @@
+@font-face {
+  font-family: MetroOffice-Regular;
+  src: url(./fonts/MetroOffice-Regular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  line-height: 1.4;
+}
+
+body {
+  font-family: "MetroOffice-Regular";
+  background-color: grey;
 }
 
 button {
@@ -10,7 +21,7 @@ button {
 }
 
 .play {
-  background-image: url(./icons/playButton.png);
+  background-image: url(./icons/playbuttonfixed2.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -65,12 +76,40 @@ button {
 
 .media-buttons {
   text-align: center;
+  padding-left: 1rem;
 }
 
-.track-list-box {
+.track-list-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  padding: 4px;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.tracks li {
+  border-bottom: 1px solid black;
+  margin-bottom: 1rem;
+}
+
+.track-time {
+  float: right;
+  margin-top: 2rem;
+}
+
+.track-icon {
+  background-image: url(./icons/track-icon.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  margin-right: 0.9rem;
+}
+
+h4 {
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 5px;
 }
