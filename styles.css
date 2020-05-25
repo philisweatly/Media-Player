@@ -13,7 +13,7 @@
 
 body {
   font-family: "MetroOffice-Regular";
-  background-color: grey;
+  background-color: white;
 }
 
 button {
@@ -77,6 +77,14 @@ button {
 .media-buttons {
   text-align: center;
   padding-left: 1rem;
+}
+
+.header-shorty {
+  padding-left: 2rem;
+}
+
+.header-runtime {
+  padding-right: 2rem;
 }
 
 .track-list-header {
