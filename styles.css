@@ -137,6 +137,7 @@ h4 {
 }
 
 #theatre-mode-bottom {
+  will-change: opacity;
   transition: all 1s ease-out;
 }
 
