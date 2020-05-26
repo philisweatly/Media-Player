@@ -139,6 +139,7 @@ h4 {
 #theatre-mode-bottom {
   will-change: opacity;
   transition: all 1s ease-out;
+  position: relative;
 }
 
 .scale-out {
@@ -147,4 +148,5 @@ h4 {
 
 .fade-out {
   opacity: 0.5;
+  z-index: -1;
 }
