@@ -3,6 +3,17 @@ var isPlaying = false;
 var playPause = document.getElementById("play-pause");
 var icon = document.getElementById("icon");
 
+var theatreMode = document.getElementById("theatre-mode");
+var theatreModeBottom = document.getElementById("theatre-mode-bottom");
+var scaleOut = document.getElementById("scale-out");
+
+theatreMode.addEventListener("click", function () {
+  if (isPlaying == false) {
+    theatreModeBottom.classList.remove("fade-out");
+    theatreMode.classList.remove("scale-out");
+  }
+});
+
 function togglePlay() {
   if (isPlaying) {
     myAudio.pause();
@@ -15,12 +26,16 @@ myAudio.onplaying = function () {
   isPlaying = true;
   playPause.classList.remove("play");
   playPause.classList.add("pause");
+  theatreModeBottom.classList.add("fade-out");
+  theatreMode.classList.add("scale-out");
 };
 
 myAudio.onpause = function () {
   isPlaying = false;
   playPause.classList.remove("pause");
   playPause.classList.add("play");
+  // theatreModeBottom.classList.remove("fade-out");
+  // theatreMode.classList.remove("scale-out");
 };
 
 var nextTrack = document.getElementById("next-track");
@@ -59,13 +74,4 @@ previousTrack.addEventListener("click", function () {
     myAudio.src = tracklist[trackPosition];
     myAudio.play();
   }
-});
-
-var theatreMode = document.getElementById("theatre-mode");
-var theatreModeBottom = document.getElementById("theatre-mode-bottom");
-var scaleOut = document.getElementById("scale-out");
-
-theatreMode.addEventListener("click", function () {
-  theatreModeBottom.classList.toggle("fade-out");
-  theatreMode.classList.toggle("scale-out");
 });
