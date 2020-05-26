@@ -13,7 +13,7 @@
 
 body {
   font-family: "MetroOffice-Regular";
-  background-color: white;
+  background-color: grey;
 }
 
 button {
@@ -21,7 +21,7 @@ button {
 }
 
 .play {
-  background-image: url(./icons/playbuttonfixed2.png);
+  background-image: url(./icons/playbutton.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -72,6 +72,7 @@ button {
 
 .media-player-image {
   width: 100%;
+  border-radius: 4px;
 }
 
 .media-buttons {
@@ -101,7 +102,7 @@ button {
 
 .track-time {
   float: right;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .track-icon {
@@ -110,10 +111,11 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 3px;
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   display: inline-block;
   margin-right: 0.9rem;
+  border-radius: 6px;
 }
 
 h4 {
