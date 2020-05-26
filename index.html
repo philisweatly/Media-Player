@@ -6,50 +6,74 @@
     <title>Media Player</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body id="body">
     <audio id="player" src="./sounds/track1.mp3"></audio>
 
     <div class="media-player">
-      <img
-        class="media-player-image"
-        src="./pics/jonSaulArtMAYBE.png"
-        alt=""
-        srcset=""
-      />
+      <div id="theatre-mode">
+        <img
+          class="media-player-image"
+          src="./pics/jonSaulArtMAYBE.png"
+          alt=""
+          srcset=""
+        />
 
-      <div class="media-buttons">
-        <button id="previous-track"></button>
-        <button id="play-pause" class="play" onclick="togglePlay()"></button>
-        <button id="next-track"></button>
+        <div class="media-buttons">
+          <button id="previous-track"></button>
+          <button id="play-pause" class="play" onclick="togglePlay()"></button>
+          <button id="next-track"></button>
+        </div>
       </div>
 
-      <div class="track-list-header">
-        <h4 class="header-shorty">Shorty</h4>
-        <h4 class="header-runtime">Run Time</h4>
-      </div>
-      <div class="track-list-box">
-        <ul class="tracks">
-          <li>
-            <span class="track-icon"></span>
-            <h4>i am jon saul</h4>
-            <span class="track-time">00:00</span>
-          </li>
-          <li>
-            <span class="track-icon"></span>
-            <h4>Suicide by Clown</h4>
-            <span class="track-time">00:00</span>
-          </li>
-          <li>
-            <span class="track-icon"></span>
-            <h4>A Demon Puppet Walks Into A Bar</h4>
-            <span class="track-time">00:00</span>
-          </li>
-          <li>
-            <span class="track-icon"></span>
-            <h4>Chasing The Green Dragon</h4>
-            <span class="track-time">00:00</span>
-          </li>
-        </ul>
+      <div id="theatre-mode-bottom">
+        <div class="track-list-header">
+          <h4 class="header-shorty">Shorty</h4>
+          <h4 class="header-runtime">Run Time</h4>
+        </div>
+        <div class="track-list-box">
+          <ul class="tracks">
+            <li>
+              <span class="track-icon"></span>
+              <h4>i am jon saul</h4>
+              <span class="track-time">00:00</span>
+            </li>
+            <li>
+              <span class="track-icon"></span>
+              <h4>Suicide by Clown</h4>
+              <span class="track-time">00:00</span>
+            </li>
+            <li>
+              <span class="track-icon"></span>
+              <h4>A Demon Puppet Walks Into A Bar</h4>
+              <span class="track-time">00:00</span>
+            </li>
+            <li>
+              <span class="track-icon"></span>
+              <h4>Chasing The Green Dragon</h4>
+              <span class="track-time">00:00</span>
+            </li>
+            <li>
+              <span class="track-icon"></span>
+              <h4>i am jon saul</h4>
+              <span class="track-time">00:00</span>
+            </li>
+            <li>
+              <span class="track-icon"></span>
+              <h4>Suicide by Clown</h4>
+              <span class="track-time">00:00</span>
+            </li>
+            <li>
+              <span class="track-icon"></span>
+              <h4>A Demon Puppet Walks Into A Bar</h4>
+              <span class="track-time">00:00</span>
+            </li>
+            <li>
+              <span class="track-icon"></span>
+              <h4>Chasing The Green Dragon</h4>
+              <span class="track-time">00:00</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 

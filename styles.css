@@ -80,6 +80,11 @@ button {
   padding-left: 1rem;
 }
 
+.track-list-box {
+  height: 40vh;
+  overflow: scroll;
+}
+
 .header-shorty {
   padding-left: 2rem;
 }
@@ -102,7 +107,7 @@ button {
 
 .track-time {
   float: right;
-  margin-top: 1rem;
+  margin: 1rem 2.5rem;
 }
 
 .track-icon {
@@ -122,4 +127,21 @@ h4 {
   font-weight: bold;
   display: inline-block;
   margin-bottom: 5px;
+}
+
+#theatre-mode {
+  transform: scale(0.8);
+  transition: all 1s ease-out;
+}
+
+#theatre-mode:hover {
+  transform: scale(1) translateY(17%);
+}
+
+#theatre-mode-bottom {
+}
+
+.fade-out {
+  opacity: 0.5;
+  transition: all 1s ease-out;
 }

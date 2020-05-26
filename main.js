@@ -60,3 +60,10 @@ previousTrack.addEventListener("click", function () {
     myAudio.play();
   }
 });
+
+var theatreMode = document.getElementById("theatre-mode");
+var theatreModeBottom = document.getElementById("theatre-mode-bottom");
+
+theatreMode.addEventListener("click", function () {
+  theatreModeBottom.classList.add("fade-out");
+});
