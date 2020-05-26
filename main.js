@@ -63,7 +63,9 @@ previousTrack.addEventListener("click", function () {
 
 var theatreMode = document.getElementById("theatre-mode");
 var theatreModeBottom = document.getElementById("theatre-mode-bottom");
+var scaleOut = document.getElementById("scale-out");
 
 theatreMode.addEventListener("click", function () {
-  theatreModeBottom.classList.add("fade-out");
+  theatreModeBottom.classList.toggle("fade-out");
+  theatreMode.classList.toggle("scale-out");
 });
