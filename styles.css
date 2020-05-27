@@ -67,6 +67,7 @@ button {
 .media-player {
   margin: 0 auto;
   padding: 4px;
+  max-width: 38rem;
 }
 
 .media-player-image {
