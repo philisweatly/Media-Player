@@ -1,3 +1,5 @@
+var body = document.body;
+
 var myAudio = document.getElementById("player");
 var isPlaying = false;
 var playPause = document.getElementById("play-pause");
@@ -60,6 +62,7 @@ theatreMode.addEventListener("click", function () {
   if (isPlaying == false) {
     theatreModeBottom.classList.remove("fade-out");
     theatreMode.classList.remove("scale-out");
+    body.classList.toggle("darken");
   }
 });
 
@@ -77,6 +80,7 @@ myAudio.onplaying = function () {
   playPause.classList.add("pause");
   theatreModeBottom.classList.add("fade-out");
   theatreMode.classList.add("scale-out");
+  body.classList.add("darken");
 };
 
 myAudio.onpause = function () {
