@@ -4,39 +4,10 @@ var playPause = document.getElementById("play-pause");
 var icon = document.getElementById("icon");
 
 var theatreMode = document.getElementById("theatre-mode");
+var theatreImage = document.getElementById("theatre-mode-image");
 var theatreModeBottom = document.getElementById("theatre-mode-bottom");
-var scaleOut = document.getElementById("scale-out");
-
-theatreMode.addEventListener("click", function () {
-  if (isPlaying == false) {
-    theatreModeBottom.classList.remove("fade-out");
-    theatreMode.classList.remove("scale-out");
-  }
-});
-
-function togglePlay() {
-  if (isPlaying) {
-    myAudio.pause();
-  } else {
-    myAudio.play();
-  }
-}
-
-myAudio.onplaying = function () {
-  isPlaying = true;
-  playPause.classList.remove("play");
-  playPause.classList.add("pause");
-  theatreModeBottom.classList.add("fade-out");
-  theatreMode.classList.add("scale-out");
-};
-
-myAudio.onpause = function () {
-  isPlaying = false;
-  playPause.classList.remove("pause");
-  playPause.classList.add("play");
-  // theatreModeBottom.classList.remove("fade-out");
-  // theatreMode.classList.remove("scale-out");
-};
+var mediaButtons = document.getElementById("track-buttons");
+var trackList = document.getElementsByTagName("li");
 
 var nextTrack = document.getElementById("next-track");
 var previousTrack = document.getElementById("previous-track");
@@ -75,3 +46,41 @@ previousTrack.addEventListener("click", function () {
     myAudio.play();
   }
 });
+
+for (var i = 0; i < trackList.length; i++) {
+  trackList[i].addEventListener("click", function () {
+    // myAudio.src = tracklist[trackPosition];
+    myAudio.play();
+    theatreModeBottom.classList.add("fade-out");
+    theatreMode.classList.add("scale-out");
+  });
+}
+
+theatreMode.addEventListener("click", function () {
+  if (isPlaying == false) {
+    theatreModeBottom.classList.remove("fade-out");
+    theatreMode.classList.remove("scale-out");
+  }
+});
+
+function togglePlay() {
+  if (isPlaying) {
+    myAudio.pause();
+  } else {
+    myAudio.play();
+  }
+}
+
+myAudio.onplaying = function () {
+  isPlaying = true;
+  playPause.classList.remove("play");
+  playPause.classList.add("pause");
+  theatreModeBottom.classList.add("fade-out");
+  theatreMode.classList.add("scale-out");
+};
+
+myAudio.onpause = function () {
+  isPlaying = false;
+  playPause.classList.remove("pause");
+  playPause.classList.add("play");
+};
