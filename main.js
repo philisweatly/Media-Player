@@ -58,13 +58,13 @@ for (var i = 0, len = g.children.length; i < len; i++) {
   })(i);
 }
 
-theatreMode.addEventListener("click", function () {
-  if (isPlaying == false) {
-    theatreModeBottom.classList.remove("fade-out");
-    theatreMode.classList.remove("scale-out");
-    body.classList.toggle("darken");
-  }
-});
+// theatreMode.addEventListener("click", function () {
+//   if (isPlaying == false) {
+//     theatreModeBottom.classList.remove("fade-out");
+//     theatreMode.classList.remove("scale-out");
+//     body.classList.toggle("darken");
+//   }
+// });
 
 function togglePlay() {
   if (isPlaying) {
@@ -87,4 +87,7 @@ myAudio.onpause = function () {
   isPlaying = false;
   playPause.classList.remove("pause");
   playPause.classList.add("play");
+  theatreModeBottom.classList.remove("fade-out");
+  theatreMode.classList.remove("scale-out");
+  body.classList.remove("darken");
 };
