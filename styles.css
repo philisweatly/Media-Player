@@ -14,7 +14,6 @@
 
 body {
   background-color: rgba(203, 203, 203, 255);
-  transition: all 1s linear;
 }
 
 button {
@@ -169,5 +168,5 @@ h4 {
 
 .darken {
   background-color: rgba(33, 33, 33, 255);
-  /* transition: all 1s linear; */
+  transition: all 1s linear;
 }
