@@ -7,11 +7,10 @@ var theatreMode = document.getElementById("theatre-mode");
 var theatreImage = document.getElementById("theatre-mode-image");
 var theatreModeBottom = document.getElementById("theatre-mode-bottom");
 var mediaButtons = document.getElementById("track-buttons");
-var trackList = document.getElementsByTagName("li");
 
 var nextTrack = document.getElementById("next-track");
 var previousTrack = document.getElementById("previous-track");
-var tracklist = [
+var tracks = [
   "./sounds/track1.mp3",
   "./sounds/track2.mp3",
   "./sounds/track3.mp3",
@@ -24,13 +23,13 @@ var tracklist = [
 var trackPosition = 0;
 
 nextTrack.addEventListener("click", function () {
-  if (trackPosition < tracklist.length - 1) {
+  if (trackPosition < tracks.length - 1) {
     trackPosition++;
-    myAudio.src = tracklist[trackPosition];
+    myAudio.src = tracks[trackPosition];
     myAudio.play();
   } else {
     trackPosition = 0;
-    myAudio.src = tracklist[trackPosition];
+    myAudio.src = tracks[trackPosition];
     myAudio.play();
   }
 });
@@ -38,22 +37,23 @@ nextTrack.addEventListener("click", function () {
 previousTrack.addEventListener("click", function () {
   if (trackPosition >= 1) {
     trackPosition--;
-    myAudio.src = tracklist[trackPosition];
+    myAudio.src = tracks[trackPosition];
     myAudio.play();
   } else {
-    trackPosition = tracklist.length - 1;
-    myAudio.src = tracklist[trackPosition];
+    trackPosition = tracks.length - 1;
+    myAudio.src = tracks[trackPosition];
     myAudio.play();
   }
 });
 
-for (var i = 0; i < trackList.length; i++) {
-  trackList[i].addEventListener("click", function () {
-    // myAudio.src = tracklist[trackPosition];
-    myAudio.play();
-    theatreModeBottom.classList.add("fade-out");
-    theatreMode.classList.add("scale-out");
-  });
+var g = document.getElementById("js-tracks");
+for (var i = 0, len = g.children.length; i < len; i++) {
+  (function (index) {
+    g.children[i].onclick = function () {
+      myAudio.src = "./sounds/track" + (index + 1) + ".mp3";
+      myAudio.play();
+    };
+  })(i);
 }
 
 theatreMode.addEventListener("click", function () {
