@@ -12,6 +12,7 @@ var mediaButtons = document.getElementById("track-buttons");
 
 var nextTrack = document.getElementById("next-track");
 var previousTrack = document.getElementById("previous-track");
+
 var tracks = [
   "./sounds/track1.mp3",
   "./sounds/track2.mp3",
@@ -28,6 +29,7 @@ nextTrack.addEventListener("click", function () {
   if (trackPosition < tracks.length - 1) {
     trackPosition++;
     myAudio.src = tracks[trackPosition];
+
     myAudio.play();
   } else {
     trackPosition = 0;
@@ -48,10 +50,10 @@ previousTrack.addEventListener("click", function () {
   }
 });
 
-var g = document.getElementById("js-tracks");
-for (var i = 0, len = g.children.length; i < len; i++) {
+var ul = document.getElementById("js-tracks");
+for (var i = 0, len = ul.children.length; i < len; i++) {
   (function (index) {
-    g.children[i].onclick = function () {
+    ul.children[i].onclick = function () {
       myAudio.src = "./sounds/track" + (index + 1) + ".mp3";
       myAudio.play();
     };
@@ -71,8 +73,6 @@ function getEventTarget(e) {
   return e.target || e.srcElement;
 }
 
-var innerText = document.getElementsByClassName("track-title");
-var ul = document.getElementById("js-tracks");
 ul.onclick = function (event) {
   var target = getEventTarget(event);
   featureTrack.innerText = target.innerText;
