@@ -89,6 +89,7 @@ myAudio.onplaying = function () {
   body.classList.add("darken");
   featureTrack.classList.add("inner-text");
   featureTrack.classList.add("display");
+  mediaButtons.classList.add("display");
 };
 
 myAudio.onpause = function () {
@@ -100,4 +101,5 @@ myAudio.onpause = function () {
   body.classList.remove("darken");
   featureTrack.classList.remove("inner-text");
   featureTrack.classList.remove("display");
+  mediaButtons.classList.remove("display");
 };

@@ -73,7 +73,7 @@ button {
 .media-player-image {
   width: 100%;
   border-radius: 4px;
-  margin-bottom: 4rem;
+  margin-bottom: 10px;
 }
 
 .feature-track {
@@ -160,7 +160,7 @@ h4 {
   font-weight: bold;
   display: inline-block;
   margin-bottom: 5px;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
 }
 
 #theatre-mode {
@@ -195,6 +195,10 @@ h4 {
 .darken {
   background-color: rgba(33, 33, 33, 255);
   transition: all 1s linear;
+}
+
+.margin-bottom {
+  margin-bottom: 1.1rem;
 }
 
 ::-webkit-scrollbar {
