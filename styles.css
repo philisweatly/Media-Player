@@ -82,7 +82,7 @@ button {
   margin-top: 5px;
   background-color: rgba(203, 203, 203, 255);
   border-radius: 3px;
-  display: none;
+  visibility: hidden;
 }
 
 .feature-track-icon {
@@ -185,6 +185,7 @@ h4 {
 
 .display {
   display: block;
+  visibility: visible;
 }
 
 .hide {
