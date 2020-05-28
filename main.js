@@ -79,7 +79,6 @@ ul.onclick = function (event) {
 };
 
 var featureTrack = document.getElementById("feature-track");
-var trackTime = document.getElementsByClassName("track-time");
 
 myAudio.onplaying = function () {
   isPlaying = true;
@@ -99,5 +98,6 @@ myAudio.onpause = function () {
   theatreModeBottom.classList.remove("fade-out");
   theatreMode.classList.remove("scale-out");
   body.classList.remove("darken");
+  featureTrack.classList.remove("inner-text");
   featureTrack.classList.remove("display");
 };
