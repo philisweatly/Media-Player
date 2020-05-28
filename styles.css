@@ -206,3 +206,11 @@ h4 {
   outline: 1px solid slategrey;
   border-radius: 10px;
 }
+
+.inner-text {
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}

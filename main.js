@@ -66,6 +66,21 @@ function togglePlay() {
   }
 }
 
+function getEventTarget(e) {
+  e = e || window.event;
+  return e.target || e.srcElement;
+}
+
+var innerText = document.getElementsByClassName("track-title");
+var ul = document.getElementById("js-tracks");
+ul.onclick = function (event) {
+  var target = getEventTarget(event);
+  featureTrack.innerText = target.innerText;
+};
+
+var featureTrack = document.getElementById("feature-track");
+var trackTime = document.getElementsByClassName("track-time");
+
 myAudio.onplaying = function () {
   isPlaying = true;
   playPause.classList.remove("play");
@@ -73,6 +88,8 @@ myAudio.onplaying = function () {
   theatreModeBottom.classList.add("fade-out");
   theatreMode.classList.add("scale-out");
   body.classList.add("darken");
+  featureTrack.classList.add("inner-text");
+  featureTrack.classList.add("display");
 };
 
 myAudio.onpause = function () {
@@ -82,4 +99,5 @@ myAudio.onpause = function () {
   theatreModeBottom.classList.remove("fade-out");
   theatreMode.classList.remove("scale-out");
   body.classList.remove("darken");
+  featureTrack.classList.remove("display");
 };
