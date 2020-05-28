@@ -78,14 +78,34 @@ button {
 .feature-track {
   width: 100%;
   height: 32px;
-  /* background-color: rgba(203, 203, 203, 255); */
-  background-color: white;
+  margin-top: 5px;
+  background-color: rgba(203, 203, 203, 255);
+  /* background-color: white; */
   border-radius: 3px;
   display: none;
 }
 
+.feature-track-icon {
+  background-image: url(./icons/track-icon.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  margin-right: 0.3rem;
+  border-radius: 3px;
+}
+
+.feature-track-text {
+  margin-left: 35%;
+  transform: translateY(-11px);
+}
+
 .media-buttons {
   text-align: center;
+  margin-top: 1.1rem;
 }
 
 .track-list-box {
