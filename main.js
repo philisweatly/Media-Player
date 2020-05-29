@@ -79,6 +79,7 @@ ul.onclick = function (event) {
 };
 
 var featureTrack = document.getElementById("feature-track");
+var featureTrackBox = document.getElementById("feature-track-box");
 
 myAudio.onplaying = function () {
   isPlaying = true;
@@ -87,6 +88,7 @@ myAudio.onplaying = function () {
   theatreModeBottom.classList.add("fade-out");
   theatreMode.classList.add("scale-out");
   body.classList.add("darken");
+  featureTrackBox.classList.remove("hidden");
   featureTrack.classList.add("inner-text");
   featureTrack.classList.add("display");
   mediaButtons.classList.add("display");
@@ -99,6 +101,7 @@ myAudio.onpause = function () {
   theatreModeBottom.classList.remove("fade-out");
   theatreMode.classList.remove("scale-out");
   body.classList.remove("darken");
+  featureTrackBox.classList.add("hidden");
   featureTrack.classList.remove("inner-text");
   featureTrack.classList.remove("display");
   mediaButtons.classList.remove("display");
