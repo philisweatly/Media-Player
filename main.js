@@ -68,6 +68,10 @@ function togglePlay() {
   }
 }
 
+var featureTrack = document.getElementById("feature-track");
+var featureTrackBox = document.getElementById("feature-track-box");
+var trackTime = document.getElementsByClassName("track-time");
+
 function getEventTarget(e) {
   e = e || window.event;
   return e.target || e.srcElement;
@@ -75,11 +79,8 @@ function getEventTarget(e) {
 
 ul.onclick = function (event) {
   var target = getEventTarget(event);
-  featureTrack.innerText = target.innerText;
+  featureTrack.textContent = target.innerText;
 };
-
-var featureTrack = document.getElementById("feature-track");
-var featureTrackBox = document.getElementById("feature-track-box");
 
 myAudio.onplaying = function () {
   isPlaying = true;
